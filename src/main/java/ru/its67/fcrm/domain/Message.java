@@ -1,9 +1,6 @@
 package ru.its67.fcrm.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Message {
@@ -20,18 +17,29 @@ public class Message {
     private String clientName;
     private String clientPhone;
 
+    // Author
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
+    private User author;
+
     //Constructors
 
     public Message() {
     }
 
-    public Message(String firstDate, String orderDevice, String orderBrand, String orderModel, String clientName, String clientPhone) {
+    public Message(String firstDate, String orderDevice, String orderBrand,
+                   String orderModel, String clientName, String clientPhone, User user) {
+        this.author =  user;
         this.firstDate = firstDate;
         this.orderDevice = orderDevice;
         this.orderBrand = orderBrand;
         this.orderModel = orderModel;
         this.clientName = clientName;
         this.clientPhone = clientPhone;
+    }
+
+    public String getAuthorName() {
+        return author != null ? author.getUsername() : "<none>";
     }
 
     // Getters and Setters
@@ -89,5 +97,13 @@ public class Message {
 
     public void setClientPhone(String clientPhone) {
         this.clientPhone = clientPhone;
+    }
+
+    public User getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(User author) {
+        this.author = author;
     }
 }
