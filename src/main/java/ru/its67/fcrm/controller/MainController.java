@@ -11,7 +11,7 @@ import ru.its67.fcrm.domain.Message;
 import ru.its67.fcrm.domain.User;
 import ru.its67.fcrm.repos.MessageRepo;
 
-import java.util.List;
+
 import java.util.Map;
 
 @Controller
@@ -25,10 +25,34 @@ public class MainController {
         return "greeting";
     }
 
+//    @GetMapping("/main")
+//    public String main(@RequestParam(required = false) String filter , Model model) {
+//        Iterable<Message> messages = messageRepo.findAll();
+//
+//        if (filter != null && !filter.isEmpty()) {
+//            messages = messageRepo.findByClientName(filter);
+//        } else {
+//            messages = messageRepo.findAll();
+//        }
+//
+//        model.addAttribute("messages", messages);
+//        model.addAttribute("filter", filter);
+//
+//        return "main";
+//    }
     @GetMapping("/main")
-    public String main(Map<String, Object> model) {
+    public String main(@RequestParam(required = false, defaultValue = "") String filter, Model model) {
         Iterable<Message> messages = messageRepo.findAll();
-        model.put("serviceorders", messages);
+
+        if (filter != null && !filter.isEmpty()) {
+            messages = messageRepo.findByClientName(filter);
+        } else {
+            messages = messageRepo.findAll();
+        }
+
+        model.addAttribute("serviceorders", messages);
+        model.addAttribute("filter", filter);
+
         return "main";
     }
 
@@ -43,20 +67,6 @@ public class MainController {
         messageRepo.save(message);
 
         Iterable<Message> messages = messageRepo.findAll();
-        model.put("serviceorders", messages);
-
-        return "main";
-    }
-    @PostMapping("filter")
-    public String filter(@RequestParam String filter, Map<String, Object> model) {
-        Iterable<Message> messages;
-
-        if (filter != null && !filter.isEmpty()) {
-            messages = messageRepo.findByClientName(filter);
-        } else {
-            messages = messageRepo.findAll();
-        }
-
         model.put("serviceorders", messages);
 
         return "main";
