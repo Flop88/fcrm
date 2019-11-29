@@ -2,10 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="184d883b-dbf1-4aa7-9ae5-b7ad65508069" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/575f4ceb-b79c-4003-b8f7-788b2848b143.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/575f4ceb-b79c-4003-b8f7-788b2848b143.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/security.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fcrm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/fcrm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/config/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/controller/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/domain/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/domain/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/domain/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/repos/MessageRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/repos/MessageRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/repos/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/repos/UserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/its67/fcrm/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userEdit.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userList.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/fcrm.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/config/MvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/config/MvcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/controller/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/controller/RegistrationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/domain/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/domain/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/domain/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/domain/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/repos/MessageRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/repos/MessageRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/repos/UserRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/repos/UserRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/its67/fcrm/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/greeting.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/greeting.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/common.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/login.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registration.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/userEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/userEdit.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/userList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/userList.ftl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +108,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -123,6 +169,7 @@
       <workItem from="1574961969299" duration="16203000" />
       <workItem from="1575048338850" duration="69000" />
       <workItem from="1575048547672" duration="534000" />
+      <workItem from="1575054503481" duration="5568000" />
     </task>
     <servers />
   </component>
@@ -144,5 +191,79 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="331" key="#Inspections" timestamp="1575057817246">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="0" y="331" key="#Inspections/0.23.1920.977@0.23.1920.977" timestamp="1575057817246" />
+    <state x="1186" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1575049599640">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="1186" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1920.977@0.23.1920.977" timestamp="1575049599640" />
+    <state width="846" height="319" key="GridCell.Tab.0.bottom" timestamp="1575060209744">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="846" height="319" key="GridCell.Tab.0.bottom/0.23.1920.977@0.23.1920.977" timestamp="1575060209744" />
+    <state width="846" height="319" key="GridCell.Tab.0.center" timestamp="1575060209742">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="846" height="319" key="GridCell.Tab.0.center/0.23.1920.977@0.23.1920.977" timestamp="1575060209742" />
+    <state width="846" height="319" key="GridCell.Tab.0.left" timestamp="1575060209739">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="846" height="319" key="GridCell.Tab.0.left/0.23.1920.977@0.23.1920.977" timestamp="1575060209739" />
+    <state width="846" height="319" key="GridCell.Tab.0.right" timestamp="1575060209744">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="846" height="319" key="GridCell.Tab.0.right/0.23.1920.977@0.23.1920.977" timestamp="1575060209744" />
+    <state width="846" height="319" key="GridCell.Tab.1.bottom" timestamp="1575060209459">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="846" height="319" key="GridCell.Tab.1.bottom/0.23.1920.977@0.23.1920.977" timestamp="1575060209459" />
+    <state width="846" height="319" key="GridCell.Tab.1.center" timestamp="1575060209458">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="846" height="319" key="GridCell.Tab.1.center/0.23.1920.977@0.23.1920.977" timestamp="1575060209458" />
+    <state width="846" height="319" key="GridCell.Tab.1.left" timestamp="1575060209458">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="846" height="319" key="GridCell.Tab.1.left/0.23.1920.977@0.23.1920.977" timestamp="1575060209458" />
+    <state width="846" height="319" key="GridCell.Tab.1.right" timestamp="1575060209459">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="846" height="319" key="GridCell.Tab.1.right/0.23.1920.977@0.23.1920.977" timestamp="1575060209459" />
+    <state width="846" height="319" key="GridCell.Tab.2.bottom" timestamp="1575060209461">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="846" height="319" key="GridCell.Tab.2.bottom/0.23.1920.977@0.23.1920.977" timestamp="1575060209461" />
+    <state width="846" height="319" key="GridCell.Tab.2.center" timestamp="1575060209460">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="846" height="319" key="GridCell.Tab.2.center/0.23.1920.977@0.23.1920.977" timestamp="1575060209460" />
+    <state width="846" height="319" key="GridCell.Tab.2.left" timestamp="1575060209460">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="846" height="319" key="GridCell.Tab.2.left/0.23.1920.977@0.23.1920.977" timestamp="1575060209460" />
+    <state width="846" height="319" key="GridCell.Tab.2.right" timestamp="1575060209461">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state width="846" height="319" key="GridCell.Tab.2.right/0.23.1920.977@0.23.1920.977" timestamp="1575060209461" />
+    <state x="384" y="112" key="MergeDialog" timestamp="1575049549711">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="384" y="112" key="MergeDialog/0.23.1920.977@0.23.1920.977" timestamp="1575049549711" />
+    <state x="1049" y="236" key="MultipleFileMergeDialog" timestamp="1575049554065">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="1049" y="236" key="MultipleFileMergeDialog/0.23.1920.977@0.23.1920.977" timestamp="1575049554065" />
+    <state x="935" y="253" key="Vcs.Push.Dialog.v2" timestamp="1575049531930">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="935" y="253" key="Vcs.Push.Dialog.v2/0.23.1920.977@0.23.1920.977" timestamp="1575049531930" />
+    <state x="1125" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575049539818">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="1125" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1920.977@0.23.1920.977" timestamp="1575049539818" />
   </component>
 </project>
