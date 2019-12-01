@@ -22,9 +22,14 @@
 
         <div class="form-group">
             <span>Авторизация</span>
+
             <input name="username" type="text" class="form-control" placeholder="Username"
                    autofocus="true"/>
+
             <input name="password" type="password" class="form-control mt-2" placeholder="Password"/>
+
+            <#if isRegisterForm><input name="email" type="email" class="form-control mt-2" placeholder="some@some.ru"/></#if>
+
             <input type="hidden" name="_csrf" value="${_csrf.token}" />
 
             <button class="btn btn-lg btn-primary btn-block mt-3" type="submit"><#if !isRegisterForm>Вход<#else>Зарегистрироваться</#if></button>
