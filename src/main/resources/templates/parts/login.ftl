@@ -16,19 +16,19 @@
 <#--        <button class="btn btn-primary" type="submit">Войти</button>-->
 <#--    </form>-->
 <#--</#macro>-->
-<#macro login path>
+<#macro login path isRegisterForm>
 <form action="${path}" method="post" class="form-signin">
-        <h2 class="form-heading">Авторизация</h2>
+        <h2 class="form-heading"><#if !isRegisterForm>Авторизация<#else>Регистрация</#if></h2><h2 class="form-heading"> </h2>
 
         <div class="form-group">
             <span>Авторизация</span>
             <input name="username" type="text" class="form-control" placeholder="Username"
                    autofocus="true"/>
-            <input name="password" type="password" class="form-control" placeholder="Password"/>
+            <input name="password" type="password" class="form-control mt-2" placeholder="Password"/>
             <input type="hidden" name="_csrf" value="${_csrf.token}" />
 
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Вход</button>
-            <h4 class="text-center"><a href="/registration">Создать аккаунт</a></h4>
+            <button class="btn btn-lg btn-primary btn-block mt-3" type="submit"><#if !isRegisterForm>Вход<#else>Зарегистрироваться</#if></button>
+            <#if !isRegisterForm><h4 class="text-center"><a href="/registration">Создать аккаунт</a></h4></#if>
         </div>
     </form>
 </#macro>
