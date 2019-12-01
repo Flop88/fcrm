@@ -12,15 +12,19 @@
             <li class="nav-item">
                 <a class="nav-link" href="/">Home</a>
             </li>
+            <#if isAdmin>
             <li class="nav-item">
                 <a class="nav-link" href="/main">Заказы</a>
             </li>
+            </#if>
+            <#if isAdmin>
             <li class="nav-item">
                 <a class="nav-link" href="/user">Админка</a>
             </li>
+            </#if>
         </ul>
 
-        <div class="navbar-text" mk-3>123</div>
+        <div class="navbar-text" style="margin-right: .5rem;">${name}</div>
         <@l.logout />
     </div>
 </nav>

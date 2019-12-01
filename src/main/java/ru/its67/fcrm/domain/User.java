@@ -35,6 +35,7 @@ public class User  implements UserDetails {
         return roles.contains(Role.ADMIN);
     }
 
+
     //Getters and Setters
 
     public Long getId() {

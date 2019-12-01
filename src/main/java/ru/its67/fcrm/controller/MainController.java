@@ -20,26 +20,11 @@ public class MainController {
     private MessageRepo messageRepo;
 
     @GetMapping("/")
-    public String greeting(Map<String, Object> model) {
-
+    public String greeting(@RequestParam(name = "name", required = false, defaultValue = "Пользователь") String name, Map<String, Object> model) {
+        model.put("model", model);
         return "greeting";
     }
 
-//    @GetMapping("/main")
-//    public String main(@RequestParam(required = false) String filter , Model model) {
-//        Iterable<Message> messages = messageRepo.findAll();
-//
-//        if (filter != null && !filter.isEmpty()) {
-//            messages = messageRepo.findByClientName(filter);
-//        } else {
-//            messages = messageRepo.findAll();
-//        }
-//
-//        model.addAttribute("messages", messages);
-//        model.addAttribute("filter", filter);
-//
-//        return "main";
-//    }
     @GetMapping("/main")
     public String main(@RequestParam(required = false, defaultValue = "") String filter, Model model) {
         Iterable<Message> messages = messageRepo.findAll();
