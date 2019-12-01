@@ -1,21 +1,3 @@
-<#--<#macro login path>-->
-<#--    <form action="${path}" method="post">-->
-<#--        <div class="form-group row">-->
-<#--            <label class="col-sm-2 col-form-label">Логин :</label>-->
-<#--            <div class="col-sm-6">-->
-<#--                <input type="text" name="username" class="form-control" placeholder="User name" />-->
-<#--            </div>-->
-<#--        </div>-->
-<#--        <div class="form-group row">-->
-<#--            <label class="col-sm-2 col-form-label">Пароль :</label>-->
-<#--            <div class="col-sm-6">-->
-<#--                <input type="password" name="password" class="form-control" placeholder="Password" />-->
-<#--            </div>-->
-<#--        </div>-->
-<#--        <input type="hidden" name="_csrf" value="${_csrf.token}" />-->
-<#--        <button class="btn btn-primary" type="submit">Войти</button>-->
-<#--    </form>-->
-<#--</#macro>-->
 <#macro login path isRegisterForm>
 <form action="${path}" method="post" class="form-signin">
         <h2 class="form-heading"><#if !isRegisterForm>Авторизация<#else>Регистрация</#if></h2><h2 class="form-heading"> </h2>
@@ -23,12 +5,12 @@
         <div class="form-group">
             <span>Авторизация</span>
 
-            <input name="username" type="text" class="form-control" placeholder="Username"
+            <input class="form-control" name="username" required type="text" class="form-control" placeholder="Username"
                    autofocus="true"/>
 
-            <input name="password" type="password" class="form-control mt-2" placeholder="Password"/>
+            <input class="form-control" name="password" required type="password" class="form-control mt-2" placeholder="Password"/>
 
-            <#if isRegisterForm><input name="email" type="email" class="form-control mt-2" placeholder="some@some.ru"/></#if>
+            <#if isRegisterForm><input class="form-control" name="email" required type="email" class="form-control mt-2" placeholder="some@some.ru"/></#if>
 
             <input type="hidden" name="_csrf" value="${_csrf.token}" />
 

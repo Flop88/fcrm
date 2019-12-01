@@ -1,14 +1,16 @@
 <#import "parts/common.ftl" as c>
 
 <@c.page>
-    List of users
-    <a href="/main">Список заказов</a>
-    <table>
+    <div class="alert alert-primary" role="alert">
+        Список пользователей:
+    </div>
+
+    <table class="table table-bordered mt-2">
         <thead>
         <tr>
-            <th>Name</th>
-            <th>Role</th>
-            <th></th>
+            <th scope="col">Name</th>
+            <th scope="col">Role</th>
+            <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
