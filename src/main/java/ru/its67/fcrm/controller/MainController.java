@@ -4,9 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import ru.its67.fcrm.domain.Message;
 import ru.its67.fcrm.domain.User;
 import ru.its67.fcrm.repos.MessageRepo;
@@ -35,10 +33,10 @@ public class MainController {
             messages = messageRepo.findAll();
         }
 
-        if (filterOrder == "1") {
+        if (filterOrder == "1" && filterOrder != "0") {
             messages = messageRepo.findAll();
-        } else {
-            messages = messageRepo.findByOrderActive(filterOrder);
+        } if (filterOrder == "1" && filterOrder == "0") {
+                messages = messageRepo.findByOrderActive(filterOrder);
         }
 
         model.addAttribute("serviceorders", messages);
@@ -48,20 +46,6 @@ public class MainController {
         return "main";
     }
 
-//    @GetMapping("/main")
-//    public String showAll(@RequestParam(required = false, defaultValue = "1") String filterOrder, Model model) {
-//        Iterable<Message> messages = messageRepo.findAll();
-//
-//        if (filterOrder == "1") {
-//            messages = messageRepo.findAll();
-//        } else {
-//            messages = messageRepo.findByOrderActive(filterOrder);
-//        }
-//
-//        model.addAttribute("filterOrder", filterOrder);
-//
-//        return "main";
-//    }
 
     @PostMapping("/main")
     public String add(@AuthenticationPrincipal User user,

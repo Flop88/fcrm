@@ -12,7 +12,13 @@
 
     <div class="container">
         <form method="get" action="/main" class="form-inline">
-            <input class="form-control" type="text" name="filterOrder" placeholder="1/2">
+            <div class="input-group">
+                <select class="custom-select" name="filterOrder">
+                    <option selected>Тип устройства...</option>
+                    <option value="0">Все</option>
+                    <option value="1">В работе</option>
+                </select>
+            </div><br>
             <button class="btn btn-primary ml-2" type="submit">Найти</button>
         </form>
     </div>
@@ -89,6 +95,7 @@
             <th scope="col">Фамилия Имя</th>
             <th scope="col">Номер телефона</th>
             <th scope="col">Добавил</th>
+            <th scope="col">Active</th>
         </tr>
         </thead>
         <tbody>
@@ -101,6 +108,7 @@
                 <td>${message.clientName}</td>
                 <td>${message.clientPhone}</td>
                 <td>${message.authorName}</td>
+                <td>${message.orderActive}</td>
             </tr>
         <#else>
             <No message
