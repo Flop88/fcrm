@@ -15,7 +15,7 @@
             <div class="input-group">
                 <select class="custom-select" name="filterOrder">
                     <option selected>Тип устройства...</option>
-                    <option value="0">Все</option>
+                    <option value="0">Закрытые</option>
                     <option value="1">В работе</option>
                 </select>
             </div><br>

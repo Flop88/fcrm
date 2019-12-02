@@ -33,10 +33,11 @@ public class MainController {
             messages = messageRepo.findAll();
         }
 
-        if (filterOrder == "1" && filterOrder != "0") {
+        if (filterOrder != null && !filterOrder.isEmpty()) {
+            messages = messageRepo.findByOrderActive(filterOrder);
+
+        } else {
             messages = messageRepo.findAll();
-        } if (filterOrder == "1" && filterOrder == "0") {
-                messages = messageRepo.findByOrderActive(filterOrder);
         }
 
         model.addAttribute("serviceorders", messages);
