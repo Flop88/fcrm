@@ -22,13 +22,17 @@ public class Message {
     @JoinColumn(name = "user_id")
     private User author;
 
+    // ShorOrdersActive
+
+    private String orderActive;
+
     //Constructors
 
     public Message() {
     }
 
     public Message(String firstDate, String orderDevice, String orderBrand,
-                   String orderModel, String clientName, String clientPhone, User user) {
+                   String orderModel, String clientName, String clientPhone, User user, String orderActive) {
         this.author =  user;
         this.firstDate = firstDate;
         this.orderDevice = orderDevice;
@@ -36,6 +40,7 @@ public class Message {
         this.orderModel = orderModel;
         this.clientName = clientName;
         this.clientPhone = clientPhone;
+        this.orderActive = orderActive;
     }
 
     public String getAuthorName() {
@@ -105,5 +110,13 @@ public class Message {
 
     public void setAuthor(User author) {
         this.author = author;
+    }
+
+    public String getOrderActive() {
+        return orderActive;
+    }
+
+    public void setOrderActive(String orderActive) {
+        this.orderActive = orderActive;
     }
 }

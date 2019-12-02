@@ -5,12 +5,14 @@
         <div class="form-group">
             <span>Авторизация</span>
 
-            <input class="form-control" name="username" required type="text" class="form-control" placeholder="Username"
+            <input class="form-control mt-2" name="username" required type="text" class="form-control" placeholder="Username"
                    autofocus="true"/>
 
-            <input class="form-control" name="password" required type="password" class="form-control mt-2" placeholder="Password"/>
+            <input class="form-control mt-2" name="password" required type="password" class="form-control mt-2" placeholder="Password"/>
 
-            <#if isRegisterForm><input class="form-control" name="email" required type="email" class="form-control mt-2" placeholder="some@some.ru"/></#if>
+            <#if isRegisterForm><input class="form-control mt-2" name="email" required type="email"
+                                       class="form-control mt-2" placeholder="some@some.ru"
+                                       pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"/></#if>
 
             <input type="hidden" name="_csrf" value="${_csrf.token}" />
 

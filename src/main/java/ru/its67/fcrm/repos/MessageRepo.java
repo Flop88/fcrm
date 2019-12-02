@@ -8,4 +8,5 @@ import java.util.List;
 public interface MessageRepo extends CrudRepository<Message, Long> {
 
     List<Message> findByClientName(String clientName);
+    List<Message> findByOrderActive(String orderActive);
 }

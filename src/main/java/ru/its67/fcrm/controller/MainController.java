@@ -26,7 +26,7 @@ public class MainController {
     }
 
     @GetMapping("/main")
-    public String main(@RequestParam(required = false, defaultValue = "") String filter, Model model) {
+    public String main(@RequestParam(required = false, defaultValue = "") String filter,@RequestParam(required = false, defaultValue = "1") String filterOrder, Model model) {
         Iterable<Message> messages = messageRepo.findAll();
 
         if (filter != null && !filter.isEmpty()) {
@@ -35,20 +35,42 @@ public class MainController {
             messages = messageRepo.findAll();
         }
 
+        if (filterOrder == "1") {
+            messages = messageRepo.findAll();
+        } else {
+            messages = messageRepo.findByOrderActive(filterOrder);
+        }
+
         model.addAttribute("serviceorders", messages);
         model.addAttribute("filter", filter);
+        model.addAttribute("filterOrder", filterOrder);
 
         return "main";
     }
+
+//    @GetMapping("/main")
+//    public String showAll(@RequestParam(required = false, defaultValue = "1") String filterOrder, Model model) {
+//        Iterable<Message> messages = messageRepo.findAll();
+//
+//        if (filterOrder == "1") {
+//            messages = messageRepo.findAll();
+//        } else {
+//            messages = messageRepo.findByOrderActive(filterOrder);
+//        }
+//
+//        model.addAttribute("filterOrder", filterOrder);
+//
+//        return "main";
+//    }
 
     @PostMapping("/main")
     public String add(@AuthenticationPrincipal User user,
                       @RequestParam String firstDate, @RequestParam String orderDevice,
                       @RequestParam String orderBrand, @RequestParam String orderModel,
-                      @RequestParam String clientName, @RequestParam String clientPhone,
+                      @RequestParam String clientName, @RequestParam String clientPhone, @RequestParam String orderActive,
             Map<String, Object> model) {
         Message message = new Message(firstDate, orderDevice, orderBrand,
-                                orderModel, clientName, clientPhone, user);
+                                orderModel, clientName, clientPhone, user, orderActive);
         messageRepo.save(message);
 
         Iterable<Message> messages = messageRepo.findAll();

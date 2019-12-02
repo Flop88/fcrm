@@ -9,6 +9,15 @@
             <button class="btn btn-primary ml-2" type="submit">Найти</button>
         </form>
     </div>
+
+    <div class="container">
+        <form method="get" action="/main" class="form-inline">
+            <input class="form-control" type="text" name="filterOrder" placeholder="1/2">
+            <button class="btn btn-primary ml-2" type="submit">Найти</button>
+        </form>
+    </div>
+
+    <!-- Add order form -->
     <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#exampleModal">
         Добавить заказ
     </button>
@@ -25,10 +34,20 @@
                 <div class="modal-body">
                     <div>
                         <form method="post">
-                            <input class="form-control" type="text" required name="firstDate"
+                            <input class="form-control" type="date" required name="firstDate"
                                    placeholder="Введите дату приема"/> <br/>
-                            <input class="form-control" type="text" required name="orderDevice"
-                                   placeholder="Тип устройства"/><br/>
+                            <div class="input-group">
+                                <select class="custom-select" name="orderDevice">
+                                    <option selected>Тип устройства...</option>
+                                    <option value="Телефон">Телефон</option>
+                                    <option value="Планшет">Планшет</option>
+                                    <option value="Ноутбук">Ноутбук</option>
+                                    <option value="ПК">ПК</option>
+                                    <option value="Моноблок">Моноблок</option>
+                                    <option value="Другое">Другое</option>
+                                </select>
+                            </div><br>
+
                             <input class="form-control" type="text" required name="orderBrand"
                                    placeholder="Бренд"/><br/>
                             <input class="form-control" type="text" required name="orderModel"
@@ -37,6 +56,8 @@
                                    placeholder="Имя и фамилия"/><br/>
                             <input class="form-control" type="text" required name="clientPhone"
                                    placeholder="Номер телефона"/><br/>
+                            <input class="form-control" type="text" required name="orderActive"
+                                   placeholder="Active"/><br/>
                             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
                             <center>
                                 <button class="btn btn-primary" type="submit">Добавить</button>
@@ -48,7 +69,11 @@
             </div>
         </div>
     </div>
-
+    <!-- End Add order form -->
+    <div class="container">
+        <input class="form-check-input" type="checkbox" name="filterOrder" value="0">Показать выданные
+    </div>
+    <!-- Orders form -->
     <div class="alert alert-primary mt-2" role="alert">
         Список заказов:
     </div>
@@ -68,7 +93,6 @@
         </thead>
         <tbody>
         <#list serviceorders as message>
-            <tr>
                 <th scope="row">${message.id}</th>
                 <td>${message.firstDate}</td>
                 <td>${message.orderDevice}</td>
@@ -83,4 +107,5 @@
         </#list>
         </tbody>
     </table>
+    <!-- End orders form -->
 </@c.page>
