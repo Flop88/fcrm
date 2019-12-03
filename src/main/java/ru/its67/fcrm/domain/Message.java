@@ -5,8 +5,8 @@ import javax.persistence.*;
 @Entity
 public class Message {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long id;
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Integer id;
 
     // ADD NEW ORDER
 
@@ -48,11 +48,11 @@ public class Message {
     }
 
     // Getters and Setters
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

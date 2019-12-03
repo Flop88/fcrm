@@ -1,8 +1,6 @@
-create table hibernate_sequence (next_val bigint) engine=InnoDB;
-
 CREATE TABLE message
 (
-    id           int8 not null,
+    id           bigint AUTO_INCREMENT not null,
     client_name  varchar(255),
     client_phone varchar(255),
     first_date   varchar(255),
@@ -22,7 +20,7 @@ create table user_role (
 engine=InnoDB;
 
 create table usr (
-    id                   int8 not null,
+    id                   bigint AUTO_INCREMENT not null,
     activation_code      varchar(255),
     active               boolean not null,
     email                varchar(255),
@@ -33,10 +31,10 @@ create table usr (
 
 engine=InnoDB;
 
-ALTER TABLE message add constraint message_user_fk
-    FOREIGN KEY (user_id)
-    REFERENCES usr (id);
+alter table message
+  add constraint message_user_fk
+  foreign key (user_id) references usr (id);
 
-ALTER TABLE user_role add constraint user_role_user_fk
-    FOREIGN KEY (user_id)
-    REFERENCES usr (id);
+alter table user_role
+  add constraint user_role_user_fk
+  foreign key (user_id) references usr (id);
