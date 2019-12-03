@@ -8,6 +8,8 @@ public class Message {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
 
+
+
     // ADD NEW ORDER
 
     private String firstDate;
