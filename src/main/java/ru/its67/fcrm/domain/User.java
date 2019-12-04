@@ -24,9 +24,6 @@ public class User  implements UserDetails {
     @NotBlank(message = "Поле не должно быть пустое")
     private String password;
 
-    @Transient
-    @NotBlank(message = "Поле не должно быть пустое")
-    private String password2;
 
     private boolean active;
 
@@ -133,11 +130,4 @@ public class User  implements UserDetails {
         return getRoles();
     }
 
-    public String getPassword2() {
-        return password2;
     }
-
-    public void setPassword2(String password2) {
-        this.password2 = password2;
-    }
-}
