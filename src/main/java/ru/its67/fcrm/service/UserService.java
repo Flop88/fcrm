@@ -8,8 +8,10 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
+import ru.its67.fcrm.domain.Message;
 import ru.its67.fcrm.domain.Role;
 import ru.its67.fcrm.domain.User;
+import ru.its67.fcrm.repos.MessageRepo;
 import ru.its67.fcrm.repos.UserRepo;
 
 import java.util.*;
@@ -19,6 +21,8 @@ import java.util.stream.Collectors;
 public class UserService implements UserDetailsService {
     @Autowired
     private UserRepo userRepo;
+    @Autowired
+    private MessageRepo messageRepo;
 
     @Autowired
     private MailSender mailSender;

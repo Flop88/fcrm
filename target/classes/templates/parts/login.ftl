@@ -72,9 +72,11 @@
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
 
         <div class="form-group row">
-            <button class="btn btn-lg btn-primary btn-block mt-3"
-                    type="submit"><#if !isRegisterForm>Вход<#else>Зарегистрироваться</#if></button>
-            <#if !isRegisterForm><h4 class="text-center"><a href="/registration">Создать аккаунт</a></h4></#if>
+            <div class="col-sm-8">
+                <button class="btn btn-lg btn-primary btn-block mt-3"
+                        type="submit"><#if !isRegisterForm>Вход<#else>Зарегистрироваться</#if></button>
+                <#if !isRegisterForm><h4 class="text-center"><a href="/registration">Создать аккаунт</a></h4></#if>
+            </div>
         </div>
         </div>
     </form>
@@ -83,6 +85,6 @@
 <#macro logout>
     <form action="/logout" method="post">
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-        <button class="btn btn-primary" type="submit">Выйти</button>
+        <button class="btn btn-primary" type="submit">Выход</button>
     </form>
 </#macro>

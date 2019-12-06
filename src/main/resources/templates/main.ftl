@@ -94,8 +94,8 @@
             <th scope="col">Модель</th>
             <th scope="col">Фамилия Имя</th>
             <th scope="col">Номер телефона</th>
-            <th scope="col">Добавил</th>
-            <th scope="col">Active</th>
+            <th scope="col">Мастер</th>
+            <th scope="col">Редактор</th>
         </tr>
         </thead>
         <tbody>
@@ -108,7 +108,9 @@
                 <td>${message.clientName}</td>
                 <td>${message.clientPhone}</td>
                 <td>${message.authorName}</td>
-                <td>${message.orderActive}</td>
+                <td>
+                    <a href="/order/${message.id}">Редактировать</a>
+                </td>
             </tr>
         <#else>
             <No message

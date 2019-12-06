@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import ru.its67.fcrm.domain.Message;
 import ru.its67.fcrm.domain.User;
 import ru.its67.fcrm.repos.MessageRepo;
+import ru.its67.fcrm.service.UserService;
 
 
 import java.util.Map;
@@ -16,6 +17,8 @@ import java.util.Map;
 public class MainController {
     @Autowired
     private MessageRepo messageRepo;
+    @Autowired
+    private UserService userService;
 
     @GetMapping("/")
     public String greeting(@RequestParam(name = "name", required = false, defaultValue = "Пользователь") String name, Map<String, Object> model) {
@@ -63,4 +66,5 @@ public class MainController {
 
         return "main";
     }
+
 }
