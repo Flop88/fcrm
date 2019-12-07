@@ -1,6 +1,7 @@
 package ru.its67.fcrm.domain;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Message {
@@ -18,6 +19,13 @@ public class Message {
     private String orderModel;
     private String clientName;
     private String clientPhone;
+    private String orderComment;
+
+    // EDIT ORDER
+//    private String orderServices;
+//    private String orderPrice;
+//    private String orderEpenses;
+//    private String orderGaranty;
 
     // Author
     @ManyToOne(fetch = FetchType.EAGER)
@@ -28,13 +36,18 @@ public class Message {
 
     private String orderActive;
 
+    //Сет заказов
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Message> messages;
+
+
     //Constructors
 
     public Message() {
     }
 
     public Message(String firstDate, String orderDevice, String orderBrand,
-                   String orderModel, String clientName, String clientPhone, User user, String orderActive) {
+                   String orderModel, String clientName, String clientPhone, User user, String orderActive, String orderComment) {
         this.author =  user;
         this.firstDate = firstDate;
         this.orderDevice = orderDevice;
@@ -43,6 +56,7 @@ public class Message {
         this.clientName = clientName;
         this.clientPhone = clientPhone;
         this.orderActive = orderActive;
+        this.orderComment = orderComment;
     }
 
     public String getAuthorName() {
@@ -121,4 +135,52 @@ public class Message {
     public void setOrderActive(String orderActive) {
         this.orderActive = orderActive;
     }
+
+    public Set<Message> getMessages() {
+        return messages;
+    }
+
+    public void setMessages(Set<Message> messages) {
+        this.messages = messages;
+    }
+
+    public String getOrderComment() {
+        return orderComment;
+    }
+
+    public void setOrderComment(String orderComment) {
+        this.orderComment = orderComment;
+    }
+//
+//    public String getOrderServices() {
+//        return orderServices;
+//    }
+//
+//    public void setOrderServices(String orderServices) {
+//        this.orderServices = orderServices;
+//    }
+//
+//    public String getOrderPrice() {
+//        return orderPrice;
+//    }
+//
+//    public void setOrderPrice(String orderPrice) {
+//        this.orderPrice = orderPrice;
+//    }
+//
+//    public String getOrderEpenses() {
+//        return orderEpenses;
+//    }
+//
+//    public void setOrderEpenses(String orderEpenses) {
+//        this.orderEpenses = orderEpenses;
+//    }
+//
+//    public String getOrderGaranty() {
+//        return orderGaranty;
+//    }
+//
+//    public void setOrderGaranty(String orderGaranty) {
+//        this.orderGaranty = orderGaranty;
+//    }
 }

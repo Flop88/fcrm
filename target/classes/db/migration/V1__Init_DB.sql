@@ -1,6 +1,11 @@
 CREATE TABLE message
 (
     id           bigint AUTO_INCREMENT not null,
+    order_garanty  varchar(255),
+    order_expenses  varchar(255),
+    order_price  varchar(255),
+    order_services  varchar(255),
+    order_comment  varchar(255),
     client_name  varchar(255),
     client_phone varchar(255),
     first_date   varchar(255),

@@ -62,6 +62,8 @@
                                    placeholder="Имя и фамилия"/><br/>
                             <input class="form-control" type="text" required name="clientPhone"
                                    placeholder="Номер телефона"/><br/>
+                            <input class="form-control" type="text" required name="orderComment"
+                                   placeholder="Коментарий клиента"/><br/>
                             <input class="form-control" type="text" required name="orderActive"
                                    placeholder="Active"/><br/>
                             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
@@ -117,5 +119,6 @@
         </#list>
         </tbody>
     </table>
+
     <!-- End orders form -->
 </@c.page>

@@ -11,7 +11,7 @@ import ru.its67.fcrm.repos.MessageRepo;
 import ru.its67.fcrm.service.UserService;
 
 
-import java.util.Map;
+import java.util.*;
 
 @Controller
 public class MainController {
@@ -26,8 +26,10 @@ public class MainController {
         return "greeting";
     }
 
+
     @GetMapping("/main")
-    public String main(@RequestParam(required = false, defaultValue = "") String filter,@RequestParam(required = false, defaultValue = "1") String filterOrder, Model model) {
+    public String main(@RequestParam(required = false, defaultValue = "") String filter,
+                       @RequestParam(required = false, defaultValue = "1") String filterOrder, Model model) {
         Iterable<Message> messages = messageRepo.findAll();
 
         if (filter != null && !filter.isEmpty()) {
@@ -55,10 +57,10 @@ public class MainController {
     public String add(@AuthenticationPrincipal User user,
                       @RequestParam String firstDate, @RequestParam String orderDevice,
                       @RequestParam String orderBrand, @RequestParam String orderModel,
-                      @RequestParam String clientName, @RequestParam String clientPhone, @RequestParam String orderActive,
+                      @RequestParam String clientName, @RequestParam String clientPhone, @RequestParam String orderActive, @RequestParam String orderComment,
             Map<String, Object> model) {
         Message message = new Message(firstDate, orderDevice, orderBrand,
-                                orderModel, clientName, clientPhone, user, orderActive);
+                                orderModel, clientName, clientPhone, user, orderActive, orderComment);
         messageRepo.save(message);
 
         Iterable<Message> messages = messageRepo.findAll();
