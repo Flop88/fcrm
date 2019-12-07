@@ -1,6 +1,7 @@
 CREATE TABLE message
 (
     id           bigint AUTO_INCREMENT not null,
+    order_seconddate varchar(255),
     order_garanty  varchar(255),
     order_expenses  varchar(255),
     order_price  varchar(255),
@@ -21,6 +22,14 @@ engine=InnoDB;
 create table user_role (
     user_id  bigint not null,
     roles    varchar(255)
+)
+engine=InnoDB;
+
+create table balances (
+    sum_id            bigint not null,
+    income             varchar(255),
+    expense            varchar(255),
+    sum                varchar(255)
 )
 engine=InnoDB;
 

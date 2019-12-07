@@ -1,6 +1,9 @@
 <#import "parts/common.ftl" as c>
 
 <@c.page>
+    <div class="alert alert-danger" role="alert">
+        <center>В кассе - 0р </center>
+    </div>
     <div class="alert alert-primary" role="alert">
         Список пользователей:
     </div>
@@ -24,4 +27,6 @@
         </#list>
         </tbody>
     </table>
+    <hr>
+    <a href="/order">Полный список заказов</a>
 </@c.page>

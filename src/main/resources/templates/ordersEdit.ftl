@@ -70,7 +70,7 @@
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Комментарий :</label>
             <div class="col-sm-6">
-                <input type="text" class="form-control mt-2" value="${order.orderComment}" name="clientPhone">
+                <input type="text" class="form-control mt-2" value="${order.orderComment}" name="orderComment">
             </div>
         </div>
 
@@ -88,14 +88,14 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Выполненные услуги :</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control mt-2" value="" name="">
+                    <input type="text" class="form-control mt-2" value="${order.orderServices!''}" name="orderServices">
                 </div>
             </div>
 
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Цена :</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control mt-2" value="" name="">
+                    <input type="text" class="form-control mt-2" value="${order.orderPrice!''}" name="orderPrice">
 
                 </div>
             </div>
@@ -103,16 +103,34 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Затраты :</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control mt-2" value="" name="">
+                    <input type="text" class="form-control mt-2" value="${order.orderExpenses!''}" name="order_expenses">
                 </div>
             </div>
 
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Гарантия :</label>
+                <label class="col-sm-2 col-form-label">Дата выдачи :</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control mt-2" value="" name="">
+                    <input type="date" class="form-control mt-2" value="${order.orderSecondDate!''}" name="order_seconddate">
                 </div>
             </div>
+
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Гарантия :</label>
+                <div class="col-sm-6">
+                    <div class="input-group">
+                        <select class="custom-select mt-2" value="${order.orderGaranty!''}" name="order_garanty">
+                            <option selected>Гарантия</option>
+                            <option value="0">Без гарантии</option>
+                            <option value="14">14 дней</option>
+                            <option value="30">30 дней</option>
+                            <option value="60">60 дней</option>
+                            <option value="90">90 дней</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
         </div>
             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
             <center>

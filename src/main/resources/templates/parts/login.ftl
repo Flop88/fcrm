@@ -1,4 +1,5 @@
 <#macro login path isRegisterForm>
+    <div class="container mt-5">
     <form action="${path}" method="post" class="form-signin" xmlns="http://www.w3.org/1999/html">
         <center><h2 class="form-heading"><#if !isRegisterForm>Авторизация<#else>Регистрация</#if></h2></center>
         <h2 class="form-heading"></h2>
@@ -80,6 +81,7 @@
         </div>
         </div>
     </form>
+    </div>
 </#macro>
 
 <#macro logout>

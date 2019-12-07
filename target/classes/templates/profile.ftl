@@ -2,6 +2,7 @@
 <#import "parts/common.ftl" as c>
 
 <@c.page>
+<div class="container mt-5">
     <form method="post" class="form-signin">
         <h2 class="form-heading">Редактор профиля -  ${name}</h2>
         <h2 class="form-heading"></h2>
@@ -19,4 +20,5 @@
             <button class="btn btn-lg btn-primary btn-block mt-3" type="submit">Сохранить</button>
         </div>
     </form>
+</div>
 </@c.page>

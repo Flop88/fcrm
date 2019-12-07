@@ -83,7 +83,7 @@
     </div>
     <!-- Orders form -->
     <div class="alert alert-primary mt-2" role="alert">
-        Список заказов:
+        Список активных заказов:
     </div>
 
     <table class="table table-bordered mt-2">

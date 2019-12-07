@@ -22,10 +22,11 @@ public class Message {
     private String orderComment;
 
     // EDIT ORDER
-//    private String orderServices;
-//    private String orderPrice;
-//    private String orderEpenses;
-//    private String orderGaranty;
+    private String orderServices;
+    private String orderPrice;
+    private String order_seconddate;
+    private String order_expenses;
+    private String order_garanty;
 
     // Author
     @ManyToOne(fetch = FetchType.EAGER)
@@ -151,36 +152,44 @@ public class Message {
     public void setOrderComment(String orderComment) {
         this.orderComment = orderComment;
     }
-//
-//    public String getOrderServices() {
-//        return orderServices;
-//    }
-//
-//    public void setOrderServices(String orderServices) {
-//        this.orderServices = orderServices;
-//    }
-//
-//    public String getOrderPrice() {
-//        return orderPrice;
-//    }
-//
-//    public void setOrderPrice(String orderPrice) {
-//        this.orderPrice = orderPrice;
-//    }
-//
-//    public String getOrderEpenses() {
-//        return orderEpenses;
-//    }
-//
-//    public void setOrderEpenses(String orderEpenses) {
-//        this.orderEpenses = orderEpenses;
-//    }
-//
-//    public String getOrderGaranty() {
-//        return orderGaranty;
-//    }
-//
-//    public void setOrderGaranty(String orderGaranty) {
-//        this.orderGaranty = orderGaranty;
-//    }
+
+    public String getOrderServices() {
+        return orderServices;
+    }
+
+    public void setOrderServices(String orderServices) {
+        this.orderServices = orderServices;
+    }
+
+    public String getOrderPrice() {
+        return orderPrice;
+    }
+
+    public void setOrderPrice(String orderPrice) {
+        this.orderPrice = orderPrice;
+    }
+
+    public String getOrderSecondDate() {
+        return order_seconddate;
+    }
+
+    public void setOrderSecondDate(String orderSecondDate) {
+        this.order_seconddate = orderSecondDate;
+    }
+
+    public String getOrderExpenses() {
+        return order_expenses;
+    }
+
+    public void setOrderExpenses(String order_expenses) {
+        this.order_expenses = order_expenses;
+    }
+
+    public String getOrderGaranty() {
+        return order_garanty;
+    }
+
+    public void setOrderGaranty(String order_garanty) {
+        this.order_garanty = order_garanty;
+    }
 }
