@@ -3,8 +3,8 @@ CREATE TABLE message
     id           bigint AUTO_INCREMENT not null,
     order_seconddate varchar(255),
     order_garanty  varchar(255),
-    order_expenses  varchar(255),
-    order_price  varchar(255),
+    order_expenses  bigint,
+    order_price  bigint,
     order_services  varchar(255),
     order_comment  varchar(255),
     client_name  varchar(255),
@@ -27,9 +27,9 @@ engine=InnoDB;
 
 create table balances (
     sum_id            bigint not null,
-    income             varchar(255),
-    expense            varchar(255),
-    sum                varchar(255)
+    income             bigint,
+    expense            bigint,
+    sum                bigint
 )
 engine=InnoDB;
 

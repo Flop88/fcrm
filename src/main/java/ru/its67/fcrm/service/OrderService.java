@@ -36,6 +36,9 @@ public class OrderService {
         if(!orderPrice.isEmpty() && !order_seconddate.isEmpty())
         {
             order.setOrderActive("0");
+        } else
+        {
+            order.setOrderActive("1");
         }
 
         messageRepo.save(order);
