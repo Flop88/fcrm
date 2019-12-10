@@ -15,10 +15,10 @@ public class OrderService {
 
     public static void saveOrder(@RequestParam String firstDate, @RequestParam String orderDevice, @RequestParam String orderBrand,
                                  @RequestParam String orderModel, @RequestParam String clientName, @RequestParam String clientPhone,
-                                 @RequestParam String orderActive, @RequestParam String orderComment, @RequestParam String orderServices,
-                                 @RequestParam String orderPrice,   @RequestParam String order_seconddate, @RequestParam String order_expenses,
-                                 @RequestParam String order_garanty,
+                                 @RequestParam String orderActive, @RequestParam String orderComment,
+                                 @RequestParam String orderServices, @RequestParam String orderPrice,   @RequestParam String orderSeconDdate, @RequestParam String orderExpenses, @RequestParam String orderGaranty,
                                  @RequestParam("orderId") Message order, MessageRepo messageRepo) {
+
         order.setFirstDate(firstDate);
         order.setOrderDevice(orderDevice);
         order.setOrderBrand(orderBrand);
@@ -29,11 +29,11 @@ public class OrderService {
         order.setOrderComment(orderComment);
         order.setOrderServices(orderServices);
         order.setOrderPrice(orderPrice);
-        order.setOrderSecondDate(order_seconddate);
-        order.setOrderExpenses(order_expenses);
-        order.setOrderGaranty(order_garanty);
+        order.setOrder_seconddate(orderSeconDdate);
+        order.setOrder_expenses(orderExpenses);
+//        order.setOrderGaranty(orderGaranty);
 
-        if(!orderPrice.isEmpty() && !order_seconddate.isEmpty())
+        if(!orderSeconDdate.isEmpty())
         {
             order.setOrderActive("0");
         } else

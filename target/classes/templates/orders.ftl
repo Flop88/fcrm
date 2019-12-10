@@ -28,15 +28,15 @@
             <tr>
                 <td>${order.id}</td>
                 <td>${order.firstDate}</td>
-                <td>${order.orderSecondDate}</td>
+                <td>${order.order_seconddate!''}</td>
                 <td>${order.orderDevice}</td>
                 <td>${order.orderBrand}</td>
                 <td>${order.orderModel}</td>
                 <td>${order.clientName}</td>
                 <td>${order.clientPhone}</td>
-                <td>${order.orderPrice}</td>
-                <td>${order.orderExpenses}</td>
-                <td>${order.orderGaranty}</td>
+                <td>${order.orderPrice!''}</td>
+                <td>${order.order_expenses!''}</td>
+                <td>${order.order_garanty!''}</td>
                 <td>${order.orderActive}</td>
                 <td><a href="/order/${order.id}">Редактировать</a></td>
             </tr>

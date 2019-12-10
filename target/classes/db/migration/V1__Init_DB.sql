@@ -1,10 +1,11 @@
 CREATE TABLE message
 (
     id           bigint AUTO_INCREMENT not null,
+    order_complect varchar(255),
     order_seconddate varchar(255),
     order_garanty  varchar(255),
-    order_expenses  bigint,
-    order_price  bigint,
+    order_expenses  varchar(255),
+    order_price  varchar(255),
     order_services  varchar(255),
     order_comment  varchar(255),
     client_name  varchar(255),
@@ -26,7 +27,6 @@ create table user_role (
 engine=InnoDB;
 
 create table balances (
-    sum_id            bigint not null,
     income             bigint,
     expense            bigint,
     sum                bigint

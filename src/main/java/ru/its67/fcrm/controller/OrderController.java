@@ -41,12 +41,15 @@ public class OrderController {
                             @RequestParam String orderActive, @RequestParam String orderComment,
                             @RequestParam String orderServices, @RequestParam String orderPrice,
                             @RequestParam String order_seconddate, @RequestParam String order_expenses,
-                            @RequestParam String order_garanty, @RequestParam Map<String, String> form,
+                            @RequestParam String order_garanty,
+                            @RequestParam Map<String, String> form,
                             @RequestParam("orderId") Message order) {
 
         orderService.saveOrder(firstDate, orderDevice, orderBrand, orderModel, clientName,
-                clientPhone, orderActive, orderComment, orderServices, orderPrice,
-                order_seconddate, order_expenses,order_garanty, order, messageRepo);
+                clientPhone, orderActive, orderComment,
+                orderServices, orderPrice,
+                order_seconddate, order_expenses,order_garanty,
+                order, messageRepo);
 
         return "redirect:/main";
     }

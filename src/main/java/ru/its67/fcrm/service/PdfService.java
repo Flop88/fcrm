@@ -21,21 +21,22 @@ public class PdfService {
         private PdfRepo pdfRepo;
 
 
-        public String exportReport(String reportFormat) throws FileNotFoundException, JRException {
-            String path = "/Users//maksim/Desktop/";
+        public String exportReport(String reportFormat, Message order) throws FileNotFoundException, JRException {
+            String path = "classpath:img/";
             List<Message> employees = pdfRepo.findAll();
             //load file and compile it
             File file = ResourceUtils.getFile("classpath:pdf/aktpriema.jrxml");
             JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
             JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(employees);
             Map<String, Object> parameters = new HashMap<>();
-            parameters.put("createdBy", "Java Techie");
+            parameters.put("createdBy", "Flop88");
             JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, dataSource);
             if (reportFormat.equalsIgnoreCase("html")) {
-                JasperExportManager.exportReportToHtmlFile(jasperPrint, path + "employees.html");
+                JasperExportManager.exportReportToHtmlFile(jasperPrint, path + "aktpriema.html");
+
             }
             if (reportFormat.equalsIgnoreCase("pdf")) {
-                JasperExportManager.exportReportToPdfFile(jasperPrint, path + "employees.pdf");
+                JasperExportManager.exportReportToPdfFile(jasperPrint, path + "aktpriema.pdf");
             }
 
             return "report generated in path : " + path;

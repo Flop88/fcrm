@@ -28,8 +28,8 @@ public class PdfController {
         return repository.findAll();
     }
 
-    @GetMapping("/report/{format}")
-    public String generateReport(@PathVariable String format) throws FileNotFoundException, JRException {
-        return pdfService.exportReport(format);
+    @GetMapping("/order/{order}/{format}")
+    public String generateReport(@PathVariable String format, @PathVariable Message order) throws FileNotFoundException, JRException {
+        return pdfService.exportReport(format, order);
     }
 }

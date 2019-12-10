@@ -103,14 +103,14 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Затраты :</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control mt-2" value="${order.orderExpenses!''}" name="order_expenses">
+                    <input type="text" class="form-control mt-2" value="${order.order_expenses!''}" name="order_expenses">
                 </div>
             </div>
 
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Дата выдачи :</label>
                 <div class="col-sm-6">
-                    <input type="date" class="form-control mt-2" value="${order.orderSecondDate!''}" name="order_seconddate">
+                    <input type="date" class="form-control mt-2" value="${order.order_seconddate!''}" name="order_seconddate">
                 </div>
             </div>
 

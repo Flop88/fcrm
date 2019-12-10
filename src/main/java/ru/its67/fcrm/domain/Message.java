@@ -7,7 +7,7 @@ import java.util.Set;
 public class Message {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
 
 
@@ -26,6 +26,7 @@ public class Message {
     private String orderPrice;
     private String order_seconddate;
     private String order_expenses;
+
     private String order_garanty;
 
     // Author
@@ -65,11 +66,11 @@ public class Message {
     }
 
     // Getters and Setters
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -169,19 +170,19 @@ public class Message {
         this.orderPrice = orderPrice;
     }
 
-    public String getOrderSecondDate() {
+    public String getOrder_seconddate() {
         return order_seconddate;
     }
 
-    public void setOrderSecondDate(String orderSecondDate) {
-        this.order_seconddate = orderSecondDate;
+    public void setOrder_seconddate(String order_seconddate) {
+        this.order_seconddate = order_seconddate;
     }
 
-    public String getOrderExpenses() {
+    public String getOrder_expenses() {
         return order_expenses;
     }
 
-    public void setOrderExpenses(String order_expenses) {
+    public void setOrder_expenses(String order_expenses) {
         this.order_expenses = order_expenses;
     }
 
@@ -189,7 +190,7 @@ public class Message {
         return order_garanty;
     }
 
-    public void setOrderGaranty(String order_garanty) {
-        this.order_garanty = order_garanty;
+    public void setOrderGaranty(String orderGaranty) {
+        this.order_garanty = orderGaranty;
     }
 }
