@@ -14,8 +14,10 @@
             <th scope="col">Устройство</th>
             <th scope="col">Бренд</th>
             <th scope="col">Модель</th>
+            <th scope="col">Комплект</th>
             <th scope="col">Фамилия Имя</th>
             <th scope="col">Номер телефона</th>
+            <th scope="col">Неисправность</th>
             <th scope="col">Цена</th>
             <th scope="col">Затраты</th>
             <th scope="col">Гарантия</th>
@@ -27,17 +29,19 @@
         <#list orders as order>
             <tr>
                 <td>${order.id}</td>
-                <td>${order.firstDate}</td>
-                <td>${order.order_seconddate!''}</td>
-                <td>${order.orderDevice}</td>
-                <td>${order.orderBrand}</td>
-                <td>${order.orderModel}</td>
-                <td>${order.clientName}</td>
-                <td>${order.clientPhone}</td>
+                <td>${order.firstDate!''}</td>
+                <td>${order.secondDate!''}</td>
+                <td>${order.orderDevice!''}</td>
+                <td>${order.orderBrand!''}</td>
+                <td>${order.orderModel!''}</td>
+                <td>${order.orderComplect!''}</td>
+                <td>${order.clientName!''}</td>
+                <td>${order.clientPhone!''}</td>
+                <td>${order.orderProblem!''}</td>
                 <td>${order.orderPrice!''}</td>
-                <td>${order.order_expenses!''}</td>
-                <td>${order.order_garanty!''}</td>
-                <td>${order.orderActive}</td>
+                <td>${order.orderExpenses!''}</td>
+                <td>${order.orderGaranty!''}</td>
+                <td>${order.orderActive!''}</td>
                 <td><a href="/order/${order.id}">Редактировать</a></td>
             </tr>
         </#list>

@@ -7,9 +7,7 @@ import java.util.Set;
 public class Message {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Integer id;
-
-
+    private Long id;
 
     // ADD NEW ORDER
 
@@ -20,14 +18,16 @@ public class Message {
     private String clientName;
     private String clientPhone;
     private String orderComment;
+    private String orderComplect;
+    private String orderProblem;
 
     // EDIT ORDER
     private String orderServices;
     private String orderPrice;
-    private String order_seconddate;
-    private String order_expenses;
+    private String secondDate;
+    private String orderExpenses;
 
-    private String order_garanty;
+    private String orderGaranty;
 
     // Author
     @ManyToOne(fetch = FetchType.EAGER)
@@ -49,7 +49,7 @@ public class Message {
     }
 
     public Message(String firstDate, String orderDevice, String orderBrand,
-                   String orderModel, String clientName, String clientPhone, User user, String orderActive, String orderComment) {
+                   String orderModel, String clientName, String clientPhone, String orderProblem, User user, String orderActive, String orderComment, String orderComplect) {
         this.author =  user;
         this.firstDate = firstDate;
         this.orderDevice = orderDevice;
@@ -57,8 +57,10 @@ public class Message {
         this.orderModel = orderModel;
         this.clientName = clientName;
         this.clientPhone = clientPhone;
+        this.orderProblem = orderProblem;
         this.orderActive = orderActive;
         this.orderComment = orderComment;
+        this.orderComplect = orderComplect;
     }
 
     public String getAuthorName() {
@@ -66,11 +68,11 @@ public class Message {
     }
 
     // Getters and Setters
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -154,6 +156,14 @@ public class Message {
         this.orderComment = orderComment;
     }
 
+    public String getOrderComplect() {
+        return orderComplect;
+    }
+
+    public void setOrderComplect(String orderComplect) {
+        this.orderComplect = orderComplect;
+    }
+
     public String getOrderServices() {
         return orderServices;
     }
@@ -170,27 +180,35 @@ public class Message {
         this.orderPrice = orderPrice;
     }
 
-    public String getOrder_seconddate() {
-        return order_seconddate;
+    public String getSecondDate() {
+        return secondDate;
     }
 
-    public void setOrder_seconddate(String order_seconddate) {
-        this.order_seconddate = order_seconddate;
+    public void setSecondDate(String secondDate) {
+        this.secondDate = secondDate;
     }
 
-    public String getOrder_expenses() {
-        return order_expenses;
+    public String getOrderExpenses() {
+        return orderExpenses;
     }
 
-    public void setOrder_expenses(String order_expenses) {
-        this.order_expenses = order_expenses;
+    public void setOrderExpenses(String orderExpenses) {
+        this.orderExpenses = orderExpenses;
     }
 
     public String getOrderGaranty() {
-        return order_garanty;
+        return orderGaranty;
     }
 
     public void setOrderGaranty(String orderGaranty) {
-        this.order_garanty = orderGaranty;
+        this.orderGaranty = orderGaranty;
+    }
+
+    public String getOrderProblem() {
+        return orderProblem;
+    }
+
+    public void setOrderProblem(String orderProblem) {
+        this.orderProblem = orderProblem;
     }
 }

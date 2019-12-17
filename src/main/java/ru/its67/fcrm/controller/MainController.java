@@ -20,12 +20,29 @@ public class MainController {
     @Autowired
     private UserService userService;
 
+
+
+    // Проверка статуса заказа для пользователя
     @GetMapping("/")
-    public String greeting(@RequestParam(name = "name", required = false, defaultValue = "Пользователь") String name, Map<String, Object> model) {
-        model.put("model", model);
+    public String greeting(@RequestParam(required = false, defaultValue = "") String filter,
+                       @RequestParam(required = false, defaultValue = "1") String filterOrder,
+                           @RequestParam(required = false, defaultValue = "0") String filterPhone,
+                           @RequestParam(required = false, defaultValue = "") Long filterId,
+                           Model model) {
+        Iterable<Message> messages = messageRepo.findAll();
+
+        if (filterPhone != null && !filterPhone.isEmpty()) {
+            messages = messageRepo.findByClientPhone(filterPhone);
+        }
+
+        model.addAttribute("serviceorders", messages);
+        model.addAttribute("filterPhone", filterPhone);
+        model.addAttribute("filterId", filterId);
+
         return "greeting";
     }
 
+    // Выгрузка заказов из БД + фильтры
 
     @GetMapping("/main")
     public String main(@RequestParam(required = false, defaultValue = "") String filter,
@@ -52,15 +69,15 @@ public class MainController {
         return "main";
     }
 
+    // Добавить заказ!
 
     @PostMapping("/main")
     public String add(@AuthenticationPrincipal User user,
                       @RequestParam String firstDate, @RequestParam String orderDevice,
                       @RequestParam String orderBrand, @RequestParam String orderModel,
-                      @RequestParam String clientName, @RequestParam String clientPhone, @RequestParam String orderActive, @RequestParam String orderComment,
+                      @RequestParam String clientName, @RequestParam String clientPhone, @RequestParam String orderProblem , @RequestParam String orderActive, @RequestParam String orderComment, @RequestParam String orderComplect,
             Map<String, Object> model) {
-        Message message = new Message(firstDate, orderDevice, orderBrand,
-                                orderModel, clientName, clientPhone, user, orderActive, orderComment);
+        Message message = new Message(firstDate, orderDevice, orderBrand, orderModel, clientName, clientPhone, orderProblem, user, orderActive, orderComment, orderComplect);
         messageRepo.save(message);
 
         Iterable<Message> messages = messageRepo.findAll();

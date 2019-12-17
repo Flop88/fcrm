@@ -8,5 +8,7 @@ public interface MessageRepo extends CrudRepository<Message, Long> {
 
     List<Message> findByClientName(String clientName);
     List<Message> findByOrderActive(String orderActive);
+    List<Message> findByClientPhone(String clientPhone);
+    //List<Message> findById(String id);
 
 }

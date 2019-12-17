@@ -14,9 +14,10 @@ public class OrderService {
     private MessageRepo messageRepo;
 
     public static void saveOrder(@RequestParam String firstDate, @RequestParam String orderDevice, @RequestParam String orderBrand,
-                                 @RequestParam String orderModel, @RequestParam String clientName, @RequestParam String clientPhone,
-                                 @RequestParam String orderActive, @RequestParam String orderComment,
-                                 @RequestParam String orderServices, @RequestParam String orderPrice,   @RequestParam String orderSeconDdate, @RequestParam String orderExpenses, @RequestParam String orderGaranty,
+                                 @RequestParam String orderModel, @RequestParam String clientName, @RequestParam String clientPhone, @RequestParam String orderProblem,
+                                 @RequestParam String orderActive, @RequestParam String orderComment, @RequestParam String orderComplect,
+                                 @RequestParam String orderServices, @RequestParam String orderPrice,
+                                 @RequestParam String orderSecondDate, @RequestParam String orderExpenses, @RequestParam String orderGaranty,
                                  @RequestParam("orderId") Message order, MessageRepo messageRepo) {
 
         order.setFirstDate(firstDate);
@@ -25,21 +26,31 @@ public class OrderService {
         order.setOrderModel(orderModel);
         order.setClientName(clientName);
         order.setClientPhone(clientPhone);
+        order.setOrderProblem(orderProblem);
         order.setOrderActive(orderActive);
         order.setOrderComment(orderComment);
+        order.setOrderComplect(orderComplect);
         order.setOrderServices(orderServices);
         order.setOrderPrice(orderPrice);
-        order.setOrder_seconddate(orderSeconDdate);
-        order.setOrder_expenses(orderExpenses);
-//        order.setOrderGaranty(orderGaranty);
+        order.setSecondDate(orderSecondDate);
+        order.setOrderExpenses(orderExpenses);
+        order.setOrderGaranty(orderGaranty);
 
-        if(!orderSeconDdate.isEmpty())
+        if(!orderSecondDate.isEmpty())
         {
             order.setOrderActive("0");
-        } else
-        {
+        }
+        else {
             order.setOrderActive("1");
         }
+
+//        if(!orderSecondDate.isEmpty())
+//        {
+//            order.setOrderActive("0");
+//        } else
+//        {
+//            order.setOrderActive("1");
+//        }
 
         messageRepo.save(order);
     }

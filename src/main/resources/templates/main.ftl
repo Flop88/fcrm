@@ -62,6 +62,19 @@
                                    placeholder="Имя и фамилия"/><br/>
                             <input class="form-control" type="text" required name="clientPhone"
                                    placeholder="Номер телефона"/><br/>
+                            <input class="form-control" type="text" required name="orderProblem"
+                                   placeholder="Неисправность"/><br/>
+                            <div class="input-group">
+                                <select class="custom-select" name="orderComplect">
+                                    <option selected>Без ЗУ</option>
+                                    <option value="С ЗУ">С ЗУ</option>
+                                    <option value="Без дисплейного модуля">Без дисплейного модуля</option>
+                                    <option value="Без ЗУ, сумка<">Без ЗУ, сумка</option>
+                                    <option value="С ЗУ, сумка<">С ЗУ, сумка</option>
+                                    <option value="Чехол">Чехол</option>
+                                </select>
+                            </div><br>
+
                             <input class="form-control" type="text" required name="orderComment"
                                    placeholder="Коментарий клиента"/><br/>
                             <input class="form-control" type="text" required name="orderActive"
@@ -96,6 +109,7 @@
             <th scope="col">Модель</th>
             <th scope="col">Фамилия Имя</th>
             <th scope="col">Номер телефона</th>
+            <th scope="col">Неисправность</th>
             <th scope="col">Мастер</th>
             <th scope="col">Редактор</th>
         </tr>
@@ -109,6 +123,7 @@
                 <td>${message.orderModel}</td>
                 <td>${message.clientName}</td>
                 <td>${message.clientPhone}</td>
+                <td>${message.orderProblem}</td>
                 <td>${message.authorName}</td>
                 <td>
                     <a href="/order/${message.id}">Редактировать</a>
