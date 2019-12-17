@@ -44,14 +44,6 @@ public class OrderService {
             order.setOrderActive("1");
         }
 
-//        if(!orderSecondDate.isEmpty())
-//        {
-//            order.setOrderActive("0");
-//        } else
-//        {
-//            order.setOrderActive("1");
-//        }
-
         messageRepo.save(order);
     }
 }

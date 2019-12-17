@@ -26,7 +26,6 @@ public class Message {
     private String orderPrice;
     private String secondDate;
     private String orderExpenses;
-
     private String orderGaranty;
 
     // Author
@@ -38,9 +37,11 @@ public class Message {
 
     private String orderActive;
 
+
     //Сет заказов
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Message> messages;
+
 
 
     //Constructors
@@ -211,4 +212,5 @@ public class Message {
     public void setOrderProblem(String orderProblem) {
         this.orderProblem = orderProblem;
     }
+
 }

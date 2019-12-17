@@ -24,10 +24,7 @@ public class MainController {
 
     // Проверка статуса заказа для пользователя
     @GetMapping("/")
-    public String greeting(@RequestParam(required = false, defaultValue = "") String filter,
-                       @RequestParam(required = false, defaultValue = "1") String filterOrder,
-                           @RequestParam(required = false, defaultValue = "0") String filterPhone,
-                           @RequestParam(required = false, defaultValue = "") Long filterId,
+    public String greeting(@RequestParam(required = false, defaultValue = "0") String filterPhone,
                            Model model) {
         Iterable<Message> messages = messageRepo.findAll();
 
@@ -37,7 +34,6 @@ public class MainController {
 
         model.addAttribute("serviceorders", messages);
         model.addAttribute("filterPhone", filterPhone);
-        model.addAttribute("filterId", filterId);
 
         return "greeting";
     }

@@ -19,6 +19,7 @@
                         </div>
                     </div><br>
                     <button class="btn btn-primary ml-2" type="submit">Найти</button>
+                    <h1>Статус - </h1>
                 </form>
             </div>
 
@@ -43,7 +44,14 @@
                 <td>${message.orderBrand}</td>
                 <td>${message.orderModel}</td>
                 <td>${message.orderProblem}</td>
-                <td>${message.orderActive}</td>
+                <td>
+                    <#if message.orderActive = "1" >
+                        Заказ в работе
+                    </#if>
+                    <#if message.orderActive = "0" >
+                        Заказ готов к выдаче
+                    </#if>
+                </td>
                 <td>${message.authorName}</td>
                 </tr>
             <#else>
