@@ -26,7 +26,7 @@
         </tr>
         </thead>
         <tbody>
-        <#list orders as order>
+        <#list orders?reverse as order>
             <tr>
                 <td>${order.id}</td>
                 <td>${order.firstDate!''}</td>

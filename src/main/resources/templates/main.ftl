@@ -115,7 +115,7 @@
         </tr>
         </thead>
         <tbody>
-        <#list serviceorders as message>
+        <#list serviceorders?reverse as message>
                 <th scope="row">${message.id}</th>
                 <td>${message.firstDate}</td>
                 <td>${message.orderDevice}</td>

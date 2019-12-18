@@ -80,8 +80,8 @@
                         <option selected>Без ЗУ</option>
                         <option value="С ЗУ">С ЗУ</option>
                         <option value="Без дисплейного модуля">Без дисплейного модуля</option>
-                        <option value="Без ЗУ, сумка<">Без ЗУ, сумка</option>
-                        <option value="С ЗУ, сумка<">С ЗУ, сумка</option>
+                        <option value="Без ЗУ, сумка">Без ЗУ, сумка</option>
+                        <option value="С ЗУ, сумка">С ЗУ, сумка</option>
                         <option value="Чехол">Чехол</option>
                     </select>
                 </div>

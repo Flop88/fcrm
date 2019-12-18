@@ -19,7 +19,6 @@
                         </div>
                     </div><br>
                     <button class="btn btn-primary ml-2" type="submit">Найти</button>
-                    <h1>Статус - </h1>
                 </form>
             </div>
 
@@ -28,18 +27,20 @@
             <tr>
                 <th scope="col">Номер заказа</th>
                 <th scope="col">Дата приема</th>
+                <th scope="col">Дата выдачи</th>
                 <th scope="col">Устройство</th>
                 <th scope="col">Бренд</th>
                 <th scope="col">Модель</th>
                 <th scope="col">Неисправность</th>
                 <th scope="col">Статус заявки</th>
-                <th scope="col">Мастер</th>
+                <th scope="col">Гарантия</th>
             </tr>
             </thead>
             <tbody>
             <#list serviceorders as message>
                 <th scope="row">${message.id}</th>
                 <td>${message.firstDate}</td>
+                <td>${message.secondDate}</td>
                 <td>${message.orderDevice}</td>
                 <td>${message.orderBrand}</td>
                 <td>${message.orderModel}</td>
@@ -52,7 +53,7 @@
                         Заказ готов к выдаче
                     </#if>
                 </td>
-                <td>${message.authorName}</td>
+                <td>${message.orderGaranty}</td>
                 </tr>
             <#else>
                 <No message
@@ -62,5 +63,11 @@
     </div>
 
         </#if>
-    <!-- End orders form -->
+    <!-- End orders form for clients-->
+    <#if isAdmin>
+        <div class="container">
+            <center><h2>Добро пожаловать, ${name!''}</h2></center>
+            Всего заработанно - 0р
+        </div>
+    </#if>
 </@c.page>
