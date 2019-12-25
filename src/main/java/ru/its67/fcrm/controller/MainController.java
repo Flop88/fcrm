@@ -45,11 +45,11 @@ public class MainController {
                        @RequestParam(required = false, defaultValue = "1") String filterOrder, Model model) {
         Iterable<Message> messages = messageRepo.findAll();
 
-        if (filter != null && !filter.isEmpty()) {
-            messages = messageRepo.findByClientName(filter);
-        } else {
-            messages = messageRepo.findAll();
-        }
+//        if (filter != null && !filter.isEmpty()) {
+//            messages = messageRepo.findByClientName(filter);
+//        } else {
+//            messages = messageRepo.findAll();
+//        }
 
         if (filterOrder != null && !filterOrder.isEmpty()) {
             messages = messageRepo.findByOrderActive(filterOrder);
@@ -59,7 +59,7 @@ public class MainController {
         }
 
         model.addAttribute("serviceorders", messages);
-        model.addAttribute("filter", filter);
+//        model.addAttribute("filter", filter);
         model.addAttribute("filterOrder", filterOrder);
 
         return "main";
@@ -71,9 +71,9 @@ public class MainController {
     public String add(@AuthenticationPrincipal User user,
                       @RequestParam String firstDate, @RequestParam String orderDevice,
                       @RequestParam String orderBrand, @RequestParam String orderModel,
-                      @RequestParam String clientName, @RequestParam String clientPhone, @RequestParam String orderProblem , @RequestParam String orderActive, @RequestParam String orderComment, @RequestParam String orderComplect,
+                      @RequestParam String clientName, @RequestParam String clientPhone, @RequestParam String orderProblem , @RequestParam String orderComment, @RequestParam String orderComplect,
             Map<String, Object> model) {
-        Message message = new Message(firstDate, orderDevice, orderBrand, orderModel, clientName, clientPhone, orderProblem, user, orderActive, orderComment, orderComplect);
+        Message message = new Message(firstDate, orderDevice, orderBrand, orderModel, clientName, clientPhone, orderProblem, user, "1", orderComment, orderComplect);
         messageRepo.save(message);
 
         Iterable<Message> messages = messageRepo.findAll();

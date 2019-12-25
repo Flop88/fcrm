@@ -23,7 +23,6 @@ public class OrderController {
     @GetMapping
     public String orderList(Model model) {
         model.addAttribute("orders", messageRepo.findAll());
-
         return "orders";
     }
 

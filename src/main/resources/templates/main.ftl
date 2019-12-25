@@ -3,20 +3,19 @@
 <@c.page>
     <div>
     </div>
-    <div class="container">
-        <form method="get" action="/main" class="form-inline">
-            <input class="form-control" type="text" name="filter" placeholder="Фамилия Имя">
-            <button class="btn btn-primary ml-2" type="submit">Найти</button>
-        </form>
-    </div>
+<#--    <div class="container">-->
+<#--        <form method="get" action="/main" class="form-inline">-->
+<#--            <input class="form-control" type="text" name="filter" placeholder="Фамилия Имя">-->
+<#--            <button class="btn btn-primary ml-2" type="submit">Найти</button>-->
+<#--        </form>-->
+<#--    </div>-->
 
     <div class="container">
         <form method="get" action="/main" class="form-inline">
             <div class="input-group">
                 <select class="custom-select" name="filterOrder">
-                    <option selected>Тип устройства...</option>
-                    <option value="0">Закрытые</option>
                     <option value="1">В работе</option>
+                    <option value="0">Закрытые</option>
                 </select>
             </div><br>
             <button class="btn btn-primary ml-2" type="submit">Найти</button>
@@ -77,8 +76,6 @@
 
                             <input class="form-control" type="text" required name="orderComment"
                                    placeholder="Коментарий клиента"/><br/>
-                            <input class="form-control" type="text" required name="orderActive"
-                                   placeholder="Active"/><br/>
                             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
                             <center>
                                 <button class="btn btn-primary" type="submit">Добавить</button>
@@ -89,10 +86,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Add order form -->
-    <div class="container">
-        <input class="form-check-input" type="checkbox" name="filterOrder" value="0">Показать выданные
     </div>
     <!-- Orders form -->
     <div class="alert alert-primary mt-2" role="alert">

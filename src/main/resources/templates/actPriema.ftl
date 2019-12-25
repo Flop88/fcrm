@@ -1,0 +1,3 @@
+
+        Акт приема:
+${act.clientName}

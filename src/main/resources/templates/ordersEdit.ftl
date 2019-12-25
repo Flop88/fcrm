@@ -97,10 +97,12 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Статус заказа :</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control mt-2 mb-2" value="${order.orderActive}" name="orderActive">
+                    <select class="custom-select" value="${order.orderActive}" name="orderActive">
+                        <option value="1" selected>В работе</option>
+                        <option value="0">Закрытые</option>
+                    </select>
                 </div>
             </div>
-
             <!-- Второй этап заполнения -->
 
         </div>
@@ -143,7 +145,6 @@
                 <div class="col-sm-6">
                     <div class="input-group">
                         <select class="custom-select mt-2" value="${order.orderGaranty!''}" name="orderGaranty">
-                            <option selected>Гарантия</option>
                             <option value="0">Без гарантии</option>
                             <option value="14">14 дней</option>
                             <option value="30">30 дней</option>
@@ -157,7 +158,7 @@
         </div>
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
         <center>
-            <button class="btn btn-primary" type="submit">Сохранить</button>
+             <button class="btn btn-primary" type="submit">Сохранить</button>
         </center>
         </div>
     </form>
