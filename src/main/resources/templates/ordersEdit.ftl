@@ -103,6 +103,9 @@
                     </select>
                 </div>
             </div>
+            <center>
+                <a href="/act/priem/${order.id}" target="_blank">Акт приема</a>
+            </center>
             <!-- Второй этап заполнения -->
 
         </div>

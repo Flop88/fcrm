@@ -42,7 +42,7 @@
                 <td>${order.orderExpenses!''}</td>
                 <td>${order.orderGaranty!''}</td>
                 <td>${order.orderActive!''}</td>
-                <td><a href="/order/${order.id}">Редактировать</a></td>
+                <td><a href="/order/${order.id}" target="_blank">Редактировать</a></td>
             </tr>
         </#list>
         </tbody>

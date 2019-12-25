@@ -1,0 +1,48 @@
+
+.image {
+    position	: relative;
+    width		: 100%; /* for IE 6 */
+}
+
+h2 {
+    position	: absolute;
+    left		: 285px;
+    width		: 100%;
+    font-size   : 22px;
+}
+h1 {
+    position	: absolute;
+    width		: 100%;
+    font-size   : 26px;
+}
+p {
+    position	: absolute;
+    left		: 285px;
+    width		: 100%;
+    font-size   : 20px;
+}
+#id {
+    top		    : 173px;
+}
+#firstDate {
+    top		    : 198px;
+}
+#clientName {
+    top		    : 218px;
+}
+#clientPhone {
+    top		    : 241px;
+}
+#orderBrand {
+    top		    : 263px;
+}
+#orderComplect {
+    top		    : 283px;
+}
+#orderVid {
+    top		    : 304px;
+}
+#orderProblem {
+    top		    : 370px;
+    left		: 355px;
+}

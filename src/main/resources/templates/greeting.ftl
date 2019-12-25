@@ -40,7 +40,7 @@
             <#list serviceorders as message>
                 <th scope="row">${message.id}</th>
                 <td>${message.firstDate}</td>
-                <td>${message.secondDate}</td>
+                <td>${message.secondDate!''}</td>
                 <td>${message.orderDevice}</td>
                 <td>${message.orderBrand}</td>
                 <td>${message.orderModel}</td>
@@ -53,7 +53,7 @@
                         Заказ готов к выдаче
                     </#if>
                 </td>
-                <td>${message.orderGaranty}</td>
+                <td>${message.orderGaranty!''}</td>
                 </tr>
             <#else>
                 <No message
